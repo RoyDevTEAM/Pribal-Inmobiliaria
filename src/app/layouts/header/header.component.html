@@ -1,0 +1,63 @@
+<header class="bg-white text-black fixed top-0 left-0 w-full z-50 shadow-lg">
+
+  <!-- Menú principal -->
+  <nav class="flex justify-between items-center px-6 py-4">
+      <!-- Logo -->
+      <div class="text-xl font-bold flex items-center gap-2">
+          <img src="assets/1.jpg" alt="Pribal Inmobiliaria" class="h-10">
+          <span class="hidden sm:inline">Pribal Inmobiliaria</span>
+      </div>
+
+      <!-- Menú desktop -->
+      <ul class="hidden md:flex gap-6 text-lg">
+          <li class="hover:scale-105 transform transition duration-300">
+              <a href="/" class="hover:text-green-700">Inicio</a>
+          </li>
+          <li class="hover:scale-105 transform transition duration-300">
+              <a href="/propiedades" class="hover:text-green-700">Propiedades</a>
+          </li>
+          <li class="hover:scale-105 transform transition duration-300">
+              <a href="/nosotros" class="hover:text-green-700">Nosotros</a>
+          </li>
+          <li class="hover:scale-105 transform transition duration-300">
+              <a href="/blog" class="hover:text-green-700">Blog</a>
+          </li>
+          <li class="hover:scale-105 transform transition duration-300">
+              <a href="/contacto" class="hover:text-green-700">Contacto</a>
+          </li>
+      </ul>
+
+      <!-- Botón menú móvil -->
+      <button class="md:hidden text-black text-2xl" (click)="toggleMenu()">
+          <i class="fas fa-bars"></i>
+      </button>
+  </nav>
+
+  <!-- Sidebar móvil -->
+  <div class="fixed inset-0 bg-black bg-opacity-75 transition-opacity duration-500"
+      [ngClass]="{'hidden': !menuOpen, 'block': menuOpen}">
+      <div class="bg-white w-64 h-full p-6 shadow-lg transform transition-all duration-500"
+          [ngClass]="{'translate-x-0': menuOpen, '-translate-x-full': !menuOpen}">
+          <button class="text-black text-2xl mb-6" (click)="toggleMenu()">
+              <i class="fas fa-times"></i>
+          </button>
+          <ul class="text-lg">
+              <li class="mb-4 hover:text-green-700">
+                  <a href="/" (click)="toggleMenu()">Inicio</a>
+              </li>
+              <li class="mb-4 hover:text-green-700">
+                  <a href="/propiedades" (click)="toggleMenu()">Propiedades</a>
+              </li>
+              <li class="mb-4 hover:text-green-700">
+                  <a href="/nosotros" (click)="toggleMenu()">Nosotros</a>
+              </li>
+              <li class="mb-4 hover:text-green-700">
+                  <a href="/blog" (click)="toggleMenu()">Blog</a>
+              </li>
+              <li class="hover:text-green-700">
+                  <a href="/contacto" (click)="toggleMenu()">Contacto</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</header>

@@ -1,0 +1,166 @@
+/* Efectos de animación */
+@keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate__fadeInLeft {
+    animation: fadeInLeft 1s ease-out;
+  }
+  
+  .animate__fadeInRight {
+    animation: fadeInRight 1s ease-out;
+  }
+  
+  /* Fondo de la sección */
+  #nosotros {
+    background-color: white;
+  }
+  
+  #nosotros h2 {
+    color: #2d3748; /* Gris oscuro */
+  }
+  
+  /* Estilos para la imagen */
+  #nosotros .rounded-full {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  #nosotros .space-x-4 a {
+    transition: color 0.3s ease;
+  }
+  /* Fondo con gradiente y color de texto */
+#mision-vision {
+    background: linear-gradient(to right, #38b2ac, #48bb78); /* Gradiente de verde a teal */
+    color: white;
+  }
+  
+  #mision-vision h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  #mision-vision .relative {
+    position: relative;
+  }
+  
+  #mision-vision .p-10 {
+    padding: 3rem;
+  }
+  
+  #mision-vision h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+  
+  #mision-vision p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: white;
+  }
+  
+  /* Efecto de sombra en las secciones */
+  #mision-vision .bg-teal-600,
+  #mision-vision .bg-green-600 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #mision-vision .bg-teal-600:hover,
+  #mision-vision .bg-green-600:hover {
+    transform: translateY(-10px);
+  }
+  
+  #mision-vision .absolute {
+    position: absolute;
+  }
+  
+  #mision-vision .opacity-10 {
+    opacity: 0.1;
+  }
+  
+  /* Diseño responsive */
+  @media (max-width: 768px) {
+    #mision-vision {
+      padding: 4rem 2rem;
+    }
+  
+    #mision-vision h2 {
+      font-size: 2rem;
+    }
+  
+    #mision-vision .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* Estilos generales de la sección */
+#equipo {
+    background: linear-gradient(to bottom, #ffffff, #f3f4f6);
+  }
+  
+  #equipo h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2d3748;
+  }
+  
+  /* Tarjetas del equipo */
+  #equipo .group {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #equipo .group:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Efecto en las imágenes */
+  #equipo .group img {
+    transition: transform 0.3s ease;
+  }
+  
+  #equipo .group:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Animación en los nombres */
+  #equipo .group h3 {
+    transition: color 0.3s ease;
+  }
+  
+  #equipo .group:hover h3 {
+    color: #38b2ac;
+  }
+  
+  /* Estilos para los iconos */
+  #equipo .group a {
+    transition: color 0.3s ease;
+  }
+  
+  #equipo .group a:hover {
+    color: #38b2ac;
+  }
+  
