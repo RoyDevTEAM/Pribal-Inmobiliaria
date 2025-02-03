@@ -1,53 +1,52 @@
-<section class="py-10 px-4 md:px-10 bg-gray-100">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
-  
-      <!-- Sidebar de filtros -->
-      <aside class="w-full md:w-1/4 bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Filtrar Propiedades</h2>
-        
-        <input type="text" [(ngModel)]="filtroNombre" placeholder="Buscar por nombre" 
-          class="w-full p-3 border rounded-lg mb-4" />
-  
-        <select [(ngModel)]="filtroPrecio" class="w-full p-3 border rounded-lg mb-4">
-          <option value="">Filtrar por precio</option>
-          <option value="menos100k">Menos de $100,000</option>
-          <option value="100k-200k">$100,000 - $200,000</option>
-          <option value="mas200k">Más de $200,000</option>
-        </select>
-  
-        <select [(ngModel)]="filtroZona" class="w-full p-3 border rounded-lg">
-          <option value="">Filtrar por zona</option>
-          <option value="Equipetrol">Equipetrol</option>
-          <option value="Urubó">Urubó</option>
-          <option value="Norte">Norte</option>
-          <option value="Centro">Centro</option>
-        </select>
-      </aside>
-  
-      <!-- Lista de propiedades -->
-      <div class="w-full md:w-3/4">
-        <h2 class="text-4xl font-bold text-gray-800 mb-6">Propiedades en Santa Cruz</h2>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div *ngFor="let propiedad of propiedadesFiltradas" 
-            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105">
-  
-            <img [src]="propiedad.imagen" alt="{{ propiedad.titulo }}" 
-              class="w-full h-48 object-cover">
-            
-            <div class="p-5">
-              <h3 class="text-2xl font-semibold text-gray-800 mb-2">{{ propiedad.titulo }}</h3>
-              <p class="text-gray-600 mb-1">Zona: <span class="font-bold">{{ propiedad.zona }}</span></p>
-              <p class="text-green-600 font-bold text-xl">${{ propiedad.precio | number }}</p>
-              <button (click)="verDetalle(propiedad.id)" 
-                class="mt-4 w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-                Ver Detalles
-              </button>
-            </div>
+<section class="py-12 px-6 md:px-16 bg-gray-50 mt-10">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
+
+    <!-- Sidebar de filtros -->
+    <aside class="w-full md:w-1/4 bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-6">Filtrar Propiedades</h2>
+
+      <input type="text" [(ngModel)]="filtroNombre" placeholder="Buscar por nombre" 
+        class="w-full p-4 border border-gray-300 rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+      <select [(ngModel)]="filtroPrecio" class="w-full p-4 border border-gray-300 rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option value="">Filtrar por precio</option>
+        <option value="menos100k">Menos de $100,000</option>
+        <option value="100k-200k">$100,000 - $200,000</option>
+        <option value="mas200k">Más de $200,000</option>
+      </select>
+
+      <select [(ngModel)]="filtroZona" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option value="">Filtrar por zona</option>
+        <option value="Equipetrol">Equipetrol</option>
+        <option value="Urubó">Urubó</option>
+        <option value="Norte">Norte</option>
+        <option value="Centro">Centro</option>
+      </select>
+    </aside>
+
+    <!-- Lista de propiedades -->
+    <div class="w-full md:w-3/4">
+      <h2 class="text-4xl font-bold text-gray-800 mb-8">Propiedades en Santa Cruz</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div *ngFor="let propiedad of propiedadesFiltradas" 
+          class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+
+          <img [src]="propiedad.imagen" alt="{{ propiedad.titulo }}" 
+            class="w-full h-56 object-cover rounded-t-lg">
+
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-3">{{ propiedad.titulo }}</h3>
+            <p class="text-gray-600 mb-2">Zona: <span class="font-semibold">{{ propiedad.zona }}</span></p>
+            <p class="text-green-600 font-semibold text-xl">${{ propiedad.precio | number }}</p>
+            <button (click)="verDetalle(propiedad.id)" 
+              class="mt-4 w-full bg-blue-600 text-white px-5 py-3 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+              Ver Detalles
+            </button>
           </div>
         </div>
       </div>
-  
     </div>
-  </section>
-  
+
+  </div>
+</section>
