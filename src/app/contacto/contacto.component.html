@@ -8,9 +8,10 @@
 
       <!-- Formulario de contacto con Formspree -->
       <form action="https://formspree.io/f/xbldywpp" method="POST">
+        
         <div class="mb-4">
           <label class="block text-gray-700 font-medium">Nombre</label>
-          <input type="text" name="nombre" placeholder="Tu nombre"
+          <input type="text" name="name" placeholder="Tu nombre"
             class="w-full p-3 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 text-gray-900 placeholder-gray-500" required>
         </div>
 
@@ -21,8 +22,14 @@
         </div>
 
         <div class="mb-4">
+          <label class="block text-gray-700 font-medium">Asunto</label>
+          <input type="text" name="subject" placeholder="Asunto del mensaje"
+            class="w-full p-3 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 text-gray-900 placeholder-gray-500" required>
+        </div>
+
+        <div class="mb-4">
           <label class="block text-gray-700 font-medium">Mensaje</label>
-          <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje"
+          <textarea name="message" rows="4" placeholder="Escribe tu mensaje"
             class="w-full p-3 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 text-gray-900 placeholder-gray-500" required></textarea>
         </div>
 
