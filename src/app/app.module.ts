@@ -12,6 +12,7 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // 🔹 Importar FormsModule para usar [(ngModel)]
 import { HttpClientModule } from '@angular/common/http';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactoComponent,
     HomeComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    BlogDetailComponent
   ],
   imports: [
     BrowserModule,

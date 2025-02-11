@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -8,33 +7,28 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./contacto.component.css']
 })
 export class ContactoComponent {
-  contactoForm: FormGroup;
-  enviado = false;
+  formData = {
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  };
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
-    this.contactoForm = this.fb.group({
-      nombre: ['', [Validators.required, Validators.minLength(3)]],
-      email: ['', [Validators.required, Validators.email]],
-      mensaje: ['', [Validators.required, Validators.minLength(10)]]
-    });
-  }
+  constructor(private http: HttpClient) {}
 
-  enviarMensaje() {
-    this.enviado = true;
-    if (this.contactoForm.valid) {
-      const formData = this.contactoForm.value;
-      this.http.post('https://formspree.io/f/xbldywpp', formData).subscribe(
-        response => {
-          console.log('Mensaje enviado:', response);
-          alert('Mensaje enviado con éxito');
-          this.contactoForm.reset();
-          this.enviado = false;
-        },
-        error => {
-          console.error('Error al enviar el mensaje:', error);
-          alert('Hubo un error al enviar el mensaje');
-        }
-      );
-    }
+  enviarFormulario() {
+    const formUrl = 'https://formspree.io/f/xbldywpp'; // Tu endpoint de Formspree
+    const headers = { 'Content-Type': 'application/json' };
+    
+    this.http.post(formUrl, JSON.stringify(this.formData), { headers }).subscribe(
+      response => {
+        alert('Mensaje enviado correctamente.');
+      },
+      error => {
+        console.error('Error al enviar:', error);
+        alert('Hubo un error al enviar el mensaje.');
+      }
+    );
   }
+  
 }

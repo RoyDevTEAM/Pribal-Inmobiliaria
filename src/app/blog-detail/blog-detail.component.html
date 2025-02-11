@@ -1,0 +1,59 @@
+<div class="max-w-6xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+  <!-- Contenido Principal -->
+  <div class="lg:col-span-2">
+    <!-- Botón Volver -->
+    <button (click)="volver()" class="mb-4 text-blue-600 flex items-center hover:text-blue-800 transition">
+      <i class="fas fa-arrow-left mr-2"></i> Volver al blog
+    </button>
+
+    <!-- Título y Datos -->
+    <h1 class="text-3xl font-bold text-gray-900">{{ noticia?.titulo }}</h1>
+    <p class="text-gray-500 mt-2">
+      <i class="fas fa-calendar-alt"></i> {{ noticia?.fecha }} | 
+      <span class="bg-blue-200 text-blue-900 px-2 py-1 rounded text-sm">
+        {{ noticia?.categoria | titlecase }}
+      </span>
+    </p>
+
+   <!-- Multimedia -->
+<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+  <ng-container *ngFor="let media of noticia?.multimedia">
+    <img *ngIf="media.tipo === 'imagen'" [src]="media.url" class="w-full h-60 object-cover rounded-lg shadow-md">
+    <iframe *ngIf="media.tipo === 'video'" [src]="getSanitizedUrl(media.url)" class="w-full h-60 rounded-lg shadow-md"></iframe>
+  </ng-container>
+</div>
+
+
+    <!-- Contenido -->
+    <div class="mt-6 text-gray-700 leading-relaxed">
+      <p *ngFor="let parrafo of noticia?.contenido?.split('\n')">{{ parrafo }}</p>
+    </div>
+
+    <!-- Enlace de Volver -->
+    <div class="mt-6">
+      <button (click)="volver()" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-800 transition">
+        <i class="fas fa-arrow-left"></i> Volver al Blog
+      </button>
+    </div>
+  </div>
+
+  <!-- Noticias Relacionadas (ASIDE) -->
+  <aside class="lg:col-span-1 bg-gray-100 p-4 rounded-lg shadow-md">
+    <h2 class="text-xl font-semibold text-blue-800 mb-4">Noticias Relacionadas</h2>
+    
+    <div *ngIf="noticiasRelacionadas.length > 0; else noRelacionadas">
+      <div *ngFor="let noticia of noticiasRelacionadas" class="mb-4 p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+        <img [src]="noticia.multimedia[0]" class="w-full h-32 object-cover rounded-md mb-2">
+        <h3 class="text-md font-semibold text-gray-900">{{ noticia.titulo }}</h3>
+        <p class="text-gray-500 text-sm">{{ noticia.fecha }}</p>
+        <a [routerLink]="['/blog', noticia.id]" class="text-blue-600 text-sm font-medium mt-2 inline-block hover:underline">
+          Leer más →
+        </a>
+      </div>
+    </div>
+
+    <ng-template #noRelacionadas>
+      <p class="text-gray-600">No hay noticias relacionadas.</p>
+    </ng-template>
+  </aside>
+</div>
