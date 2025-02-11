@@ -47,11 +47,7 @@
   #nosotros .space-x-4 a {
     transition: color 0.3s ease;
   }
-  /* Fondo con gradiente y color de texto */
-#mision-vision {
-    background: linear-gradient(to right, #38b2ac, #48bb78); /* Gradiente de verde a teal */
-    color: white;
-  }
+
   
   #mision-vision h2 {
     font-size: 2.5rem;
@@ -151,16 +147,11 @@
     transition: color 0.3s ease;
   }
   
-  #equipo .group:hover h3 {
-    color: #38b2ac;
-  }
+ 
   
   /* Estilos para los iconos */
   #equipo .group a {
     transition: color 0.3s ease;
   }
   
-  #equipo .group a:hover {
-    color: #38b2ac;
-  }
-  
+ 
