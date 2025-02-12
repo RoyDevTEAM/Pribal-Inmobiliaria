@@ -80,7 +80,7 @@ export class NoticiasService {
       fecha: '10 de febrero de 2025',
       categoria: 'propiedades',
       multimedia: [
-        { tipo: 'imagen', url: 'https://cdn.prod.website-files.com/6643a82fc46ca462b5ef9921/6644d76852cfb44c1d4be520_casa-urubo-1.jpeg' },
+        { tipo: 'imagen', url: '/assets/IMG-20250212-WA0021.jpg' },
         { tipo: 'imagen', url: 'https://cdn.prod.website-files.com/6643a82fc46ca462b5ef9921/6644d76852cfb44c1d4be520_casa-urubo-2.jpeg' },
         { tipo: 'imagen', url: 'https://cdn.prod.website-files.com/6643a82fc46ca462b5ef9921/6644d76852cfb44c1d4be520_casa-urubo-3.jpeg' },
         { tipo: 'video', url: 'https://www.youtube.com/embed/65sw3ArpnuqVyyzB' } // Reemplaza VIDEO_ID con el ID del video de YouTube
