@@ -11,17 +11,23 @@ import { NoticiasService } from '../services/noticia.service';
 export class BlogDetailComponent implements OnInit {
   noticia: Noticia | null = null;
   noticiasRelacionadas: Noticia[] = [];
-  sanitizedUrl: SafeResourceUrl | null = null;  // Variable para almacenar la URL sanitizada
 
   constructor(
     private route: ActivatedRoute,
     private noticiasService: NoticiasService,
     private router: Router,
-    private sanitizer: DomSanitizer  // Inyectar DomSanitizer
+    private sanitizer: DomSanitizer
   ) {}
 
   ngOnInit() {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    // Suscribirse a cambios en la URL para actualizar dinámicamente el contenido
+    this.route.paramMap.subscribe(params => {
+      const id = Number(params.get('id'));
+      this.cargarNoticia(id);
+    });
+  }
+
+  cargarNoticia(id: number) {
     const noticiaEncontrada = this.noticiasService.getNoticiaById(id);
 
     if (!noticiaEncontrada) {
@@ -38,8 +44,8 @@ export class BlogDetailComponent implements OnInit {
     this.noticiasRelacionadas = this.noticiasService.getNoticias()
       .filter(n => n.id !== this.noticia!.id && n.categoria === this.noticia!.categoria)
       .slice(0, 3); // Máximo 3 noticias
-  }
-
+  } 
+  
   volver() {
     this.router.navigate(['/blog']);
   }

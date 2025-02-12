@@ -15,14 +15,13 @@
       </span>
     </p>
 
-   <!-- Multimedia -->
-<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-  <ng-container *ngFor="let media of noticia?.multimedia">
-    <img *ngIf="media.tipo === 'imagen'" [src]="media.url" class="w-full h-60 object-cover rounded-lg shadow-md">
-    <iframe *ngIf="media.tipo === 'video'" [src]="getSanitizedUrl(media.url)" class="w-full h-60 rounded-lg shadow-md"></iframe>
-  </ng-container>
-</div>
-
+    <!-- Multimedia -->
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <ng-container *ngFor="let media of noticia?.multimedia">
+        <img *ngIf="media.tipo === 'imagen'" [src]="media.url" class="w-full h-60 object-cover rounded-lg shadow-md">
+        <iframe *ngIf="media.tipo === 'video'" [src]="getSanitizedUrl(media.url)" class="w-full h-60 rounded-lg shadow-md"></iframe>
+      </ng-container>
+    </div>
 
     <!-- Contenido -->
     <div class="mt-6 text-gray-700 leading-relaxed">
@@ -42,13 +41,13 @@
     <h2 class="text-xl font-semibold text-blue-800 mb-4">Noticias Relacionadas</h2>
     
     <div *ngIf="noticiasRelacionadas.length > 0; else noRelacionadas">
-      <div *ngFor="let noticia of noticiasRelacionadas" class="mb-4 p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition">
-        <img [src]="noticia.multimedia[0]" class="w-full h-32 object-cover rounded-md mb-2">
+      <div *ngFor="let noticia of noticiasRelacionadas" class="mb-4 p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer" (click)="cargarNoticia(noticia.id)">
+        <img [src]="noticia.multimedia[0].url" class="w-full h-32 object-cover rounded-md mb-2">
         <h3 class="text-md font-semibold text-gray-900">{{ noticia.titulo }}</h3>
         <p class="text-gray-500 text-sm">{{ noticia.fecha }}</p>
-        <a [routerLink]="['/blog', noticia.id]" class="text-blue-600 text-sm font-medium mt-2 inline-block hover:underline">
+        <span class="text-blue-600 text-sm font-medium mt-2 inline-block hover:underline">
           Leer más →
-        </a>
+        </span>
       </div>
     </div>
 

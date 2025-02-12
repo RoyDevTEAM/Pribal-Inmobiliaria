@@ -21,26 +21,12 @@ export class NoticiasService {
 
       Si estás buscando comprar o vender una propiedad, no dudes en contactarnos. Te asesoraremos en cada paso del proceso para garantizar una experiencia segura y eficiente.`
     },
-    {
-      id: 2,
-      titulo: 'Evento de Networking Inmobiliario: Conectando con Expertos',
-      fecha: '5 de febrero de 2025',
-      categoria: 'actividades',
-      multimedia: [
-        { tipo: 'imagen', url: 'https://cdn.prod.website-files.com/61e9b342b016364181c41f50/6425bcf814ecb5ac92aaf327_Blog%20Enero%20(25).png' },
-        { tipo: 'imagen', url: 'https://cdn.prod.website-files.com/6643a82fc46ca462b5ef9921/6644d76852cfb44c1d4be520_656e64944fc3722f3ea2968b_networking-inmobiliario-2.jpeg' }
-      ],
-      contenido: `El pasado 5 de febrero, nuestra inmobiliaria organizó un evento de networking exclusivo para profesionales del sector inmobiliario. La cita reunió a inversores, agentes y arquitectos en un ambiente de intercambio de conocimientos y oportunidades de negocio.
-
-      Durante el evento, se llevaron a cabo charlas magistrales sobre las tendencias del mercado, las nuevas regulaciones inmobiliarias y las oportunidades de inversión en 2025. Además, los asistentes pudieron interactuar con líderes del sector y establecer alianzas estratégicas.
-
-      La jornada culminó con una sesión de preguntas y respuestas, donde nuestros expertos compartieron su visión sobre el futuro del mercado inmobiliario en la región. Agradecemos a todos los participantes y los invitamos a estar atentos a nuestras próximas actividades.`
-    },
+   
     {
       id: 3,
       titulo: 'Nuevo Cliente Adquiere su Hogar Soñado',
       fecha: '1 de febrero de 2025',
-      categoria: 'clientes',
+      categoria: 'actividades',
       multimedia: [
         { tipo: 'imagen', url: 'https://thumbs.dreamstime.com/b/familia-con-hijos-comprando-una-casa-o-apartamento-nuevo-y-mud%C3%A1ndose-su-hogar-so%C3%B1ado-de-compra-familiar-nueva-vista-posterior-242525290.jpg' },
         { tipo: 'imagen', url: 'https://img.freepik.com/fotos-premium/feliz-familia-musulmana-comprando-apartamento-nuevo-senalar-dedo_568137-184.jpg' }
@@ -65,7 +51,53 @@ export class NoticiasService {
       Durante tiempo limitado, ofrecemos descuentos especiales en viviendas seleccionadas con características premium, incluyendo piscinas, domótica avanzada y vistas panorámicas. Además, brindamos facilidades de financiamiento con tasas preferenciales.
 
       No pierdas la oportunidad de vivir en una residencia de ensueño. Contáctanos para obtener más información y agenda una visita personalizada con nuestros expertos en bienes raíces.`
-    }
+    },{
+      id: 5,
+      titulo: 'Pribal Capacita a sus Agentes Inmobiliarios para Brindar un Servicio de Excelencia',
+      fecha: '11 de febrero de 2025',
+      categoria: 'actividades',
+      multimedia: [
+        { tipo: 'imagen', url: '/assets/IMG-20250211-WA0159.jpg' },
+        { tipo: 'imagen', url: '/assets/IMG-20250211-WA0174.jpg' },
+        { tipo: 'video', url: 'https://www.youtube.com/embed/VIDEO_ID' } // Reemplaza VIDEO_ID con el ID del video de YouTube
+      ],
+      contenido: `Con el firme compromiso de ofrecer un servicio inmobiliario de primer nivel, Pribal llevó a cabo una jornada de capacitación intensiva dirigida a su equipo de agentes inmobiliarios. Esta iniciativa, liderada por la CEO Priscila Balcázar, tuvo como objetivo fortalecer las habilidades del equipo en áreas clave como técnicas de ventas, negociación, marketing digital y atención al cliente.
+    
+      Durante la sesión, los participantes se involucraron en talleres interactivos, donde adquirieron conocimientos sobre las últimas tendencias del mercado y estrategias innovadoras para mejorar la experiencia de los clientes. La formación estuvo a cargo de expertos del sector, quienes compartieron valiosas experiencias y mejores prácticas aplicables en el día a día.
+    
+      🔹 Nuestro compromiso con la excelencia  
+      En Pribal, creemos que la formación continua es esencial para garantizar un servicio de calidad y mantenernos a la vanguardia del sector inmobiliario. Esta capacitación no solo fortalece las competencias de nuestros agentes, sino que también reafirma nuestro compromiso con quienes confían en nosotros para encontrar su hogar ideal.
+    
+      🎥 Revive los mejores momentos de la capacitación en nuestro canal de YouTube.  
+    
+      📸 ¡Mira las imágenes del evento y descubre cómo seguimos elevando los estándares del sector inmobiliario!  
+    
+      📞 Contacto: Priscila Balcázar – CEO Pribal Inmobiliaria  
+      📲 Teléfono: 69419909`
+    },{
+      id: 6,
+      titulo: '🏡 ¡La casa de tus sueños te espera en Parque 3, Urubó!',
+      fecha: '10 de febrero de 2025',
+      categoria: 'propiedades',
+      multimedia: [
+        { tipo: 'imagen', url: 'https://cdn.prod.website-files.com/6643a82fc46ca462b5ef9921/6644d76852cfb44c1d4be520_casa-urubo-1.jpeg' },
+        { tipo: 'imagen', url: 'https://cdn.prod.website-files.com/6643a82fc46ca462b5ef9921/6644d76852cfb44c1d4be520_casa-urubo-2.jpeg' },
+        { tipo: 'imagen', url: 'https://cdn.prod.website-files.com/6643a82fc46ca462b5ef9921/6644d76852cfb44c1d4be520_casa-urubo-3.jpeg' },
+        { tipo: 'video', url: 'https://www.youtube.com/embed/VIDEO_ID' } // Reemplaza VIDEO_ID con el ID del video de YouTube
+      ],
+      contenido: `✨ Descubre esta increíble propiedad en Parque 3, Urubó, a solo 5 minutos del puente Mario Foianini. Diseñada para brindarte comodidad y exclusividad, esta casa lo tiene todo:
+    
+      ✅ 4 habitaciones, incluyendo una suite con vestidor y baño privado.  
+      ✅ Amplia sala de estar ideal para compartir con familia y amigos.  
+      ✅ Cocina totalmente equipada y un elegante baño de visitas.  
+      ✅ Churrasquera perfecta para momentos inolvidables al aire libre.  
+    
+      🌿 Vive con seguridad, tranquilidad y el mejor ambiente sin alejarte de la ciudad.  
+    
+      📩 Escríbeme y agenda tu visita. ¡Esta casa puede ser tuya!  
+      📞 Contacto: 69419909`
+    },
+    
   ];
 
   constructor() {}
