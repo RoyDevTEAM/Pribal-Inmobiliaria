@@ -81,8 +81,8 @@ export class NoticiasService {
       categoria: 'propiedades',
       multimedia: [
         { tipo: 'imagen', url: '/assets/IMG-20250212-WA0021.jpg' },
-        { tipo: 'imagen', url: 'https://cdn.prod.website-files.com/6643a82fc46ca462b5ef9921/6644d76852cfb44c1d4be520_casa-urubo-2.jpeg' },
-        { tipo: 'imagen', url: 'https://cdn.prod.website-files.com/6643a82fc46ca462b5ef9921/6644d76852cfb44c1d4be520_casa-urubo-3.jpeg' },
+        { tipo: 'imagen', url: '/assets/IMG-20250212-WA0025.jpg' },
+        { tipo: 'imagen', url: '/assets/IMG-20250212-WA0024.jpg' },
         { tipo: 'video', url: 'https://www.youtube.com/embed/FFA7BijPcvI' } // Reemplaza VIDEO_ID con el ID del video de YouTube
       ],
       contenido: `✨ Descubre esta increíble propiedad en Parque 3, Urubó, a solo 5 minutos del puente Mario Foianini. Diseñada para brindarte comodidad y exclusividad, esta casa lo tiene todo:
