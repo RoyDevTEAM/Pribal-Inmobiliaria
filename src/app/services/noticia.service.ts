@@ -58,8 +58,8 @@ export class NoticiasService {
       categoria: 'actividades',
       multimedia: [
         { tipo: 'imagen', url: '/assets/IMG-20250211-WA0159.jpg' },
-        { tipo: 'imagen', url: '/assets/IMG-20250211-WA0174.jpg' },
-        { tipo: 'video', url: 'https://www.youtube.com/embed/VIDEO_ID' } // Reemplaza VIDEO_ID con el ID del video de YouTube
+        { tipo: 'imagen', url: '/assets/IMG-20250211-WA0174.jpg' }
+        //,{ tipo: 'video', url: 'https://www.youtube.com/embed/VIDEO_ID' } // Reemplaza VIDEO_ID con el ID del video de YouTube
       ],
       contenido: `Con el firme compromiso de ofrecer un servicio inmobiliario de primer nivel, Pribal llevó a cabo una jornada de capacitación intensiva dirigida a su equipo de agentes inmobiliarios. Esta iniciativa, liderada por la CEO Priscila Balcázar, tuvo como objetivo fortalecer las habilidades del equipo en áreas clave como técnicas de ventas, negociación, marketing digital y atención al cliente.
     
